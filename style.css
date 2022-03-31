@@ -1,9 +1,11 @@
 body {
+
 	margin: 0;
 	padding: 0;
-	color: rgb(215, 225, 238);
+	color: #d7e1ee;
 	font-family: 'Montserrat', sans-serif;
 }
+
 
 /* Header */
 
@@ -99,8 +101,14 @@ body {
 /* MAIN  */
 
 main {
-	height: 70em;
+	height: 100em;
 	background-color: #2A2937;
+
+	/* parralax */
+	overflow-x: hidden;
+	overflow-y: auto;
+	perspective: 2px;
+
 }
 
 /* SECTION 1 */
@@ -137,8 +145,8 @@ main {
 .section_2 {
 	display: flex;
 	flex-direction: column;
-	margin-right: 20%;
-	margin-left: 20%;
+	margin-right: 25%;
+	margin-left: 25%;
 	padding: 4%;
 }
 
@@ -177,4 +185,87 @@ main {
 
 .section_2 button:hover:focus {
 	outline: none;
+}
+
+
+/* HR  */
+
+.divider {
+	color: #ffffff;
+	display: table;
+	font-size: 5vh;
+	text-align: center;
+	width: 85%;
+	margin: 40px auto;
+}
+
+.divider span {
+	display: table-cell;
+	position: relative;
+}
+
+.divider span:first-child, .divider span:last-child {
+	width: 50%;
+	top: 13px;
+	-moz-background-size: 100% 2px;
+	background-size: 100% 2px;
+	background-position: 0 0, 0 100%;
+	background-repeat: no-repeat;
+}
+
+.divider span:first-child {
+	background-image: -webkit-linear-gradient(180deg, transparent, #d7e1ee);
+	background-image: -moz-linear-gradient(180deg, transparent, #d7e1ee);
+	background-image: -o-linear-gradient(180deg, transparent, #d7e1ee);
+	background-image: linear-gradient(90deg, transparent, #d7e1ee);
+}
+
+.divider span:nth-child(2) {
+	color: #d7e1ee;
+	padding: 0px 5px;
+	width: auto;
+	white-space: nowrap;
+}
+
+.divider span:last-child {
+	background-image: -webkit-linear-gradient(180deg, #d7e1ee, transparent);
+	background-image: -moz-linear-gradient(180deg, #d7e1ee, transparent);
+	background-image: -o-linear-gradient(180deg, #d7e1ee, transparent);
+	background-image: linear-gradient(90deg, #d7e1ee, transparent);
+}
+
+.divider span {
+	color: #ffffff;
+}
+
+/* MES PROJETS  */
+.bg_container1, .bg_container2, .bg_container3 {
+		width: 100%;
+	height: 25vh;
+	opacity: 0.4;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.bg_container1 {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(https://www.theindianwire.com/wp-content/uploads/2020/04/fidget-spinner-video-games-controllers-playstation-wallpaper-1024x683.jpg);
+
+}
+.bg_container2 {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(https://g5-assets-cld-res.cloudinary.com/image/upload/x_0,y_134,h_1233,w_2186,c_crop/q_auto,f_auto,fl_lossy,c_fill,g_center,h_406,w_720/v1598996497/g5/g5-c-5lzenrews-olympus-property-management/g5-cl-1k8w0ssgsw-mosaic-dallas/services/GettyImages-1257225600_u7gsgu.jpg);
+
+}
+.bg_container3 {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(https://wallpaperaccess.com/full/4014646.jpg);
+
+}
+a {
+		text-decoration: none;
+		color: #fafafa;
+
+}
+.bg_container1 h1, .bg_container2 h1, .bg_container3 h1 {
+	color: #d7e1ee;
+    text-align:center;
+
 }
