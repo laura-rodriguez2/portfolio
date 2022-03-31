@@ -1,8 +1,10 @@
 body {
-	margin:0;
-	padding:0;
+	margin: 0;
+	padding: 0;
+	color: rgb(215, 225, 238);
 	font-family: 'Montserrat', sans-serif;
 }
+
 /* Header */
 
 .header-basic {
@@ -40,22 +42,22 @@ body {
 }
 
 
-.header-basic .header-limiter nav{
-	font:16px Arial, Helvetica, sans-serif;
+.header-basic .header-limiter nav {
+	font: 16px Arial, Helvetica, sans-serif;
 	line-height: 40px;
 	float: right;
 }
 
-.header-basic .header-limiter nav a{
+.header-basic .header-limiter nav a {
 	display: inline-block;
 	padding: 0 5px;
-	text-decoration:none;
+	text-decoration: none;
 	color: #ffffff;
 	font-size: 16px;
 	opacity: 0.9;
 }
 
-.header-basic .header-limiter nav a:hover{
+.header-basic .header-limiter nav a:hover {
 	color: #D7AF5B;
 	/* opacity: 1; */
 }
@@ -85,7 +87,7 @@ body {
 
 	.header-basic .header-limiter nav {
 		line-height: 1;
-		float:none;
+		float: none;
 	}
 
 	.header-basic .header-limiter nav a {
@@ -96,6 +98,12 @@ body {
 
 /* MAIN  */
 
+main {
+	height: 70em;
+	background-color: #2A2937;
+}
+
+/* SECTION 1 */
 .first_section {
 	background-color: #1B1924;
 	height: 300px;
@@ -103,19 +111,70 @@ body {
 	flex-direction: row;
 	justify-content: center;
 }
+
 .first_section h1 {
-	color: white;
 	font-weight: lighter;
 	align-self: center;
 	font-size: 3vw;
+	padding-right: 5%;
 }
-.first_section .logoLR {
-	height:300px;
-	width: 300px;
-}
-.first_section img {
 
+.first_section .logoLR {
+	height: 80%;
+	padding-top: 2%;
+	align-items: center;
+	/* width: 100%; */
+}
+
+.first_section img {
 	height: 100%;
 	width: 100%;
 	object-fit: contain;
+}
+
+
+/* SECTION 2 */
+.section_2 {
+	display: flex;
+	flex-direction: column;
+	margin-right: 20%;
+	margin-left: 20%;
+	padding: 4%;
+}
+
+.section_2 button {
+	background-color: #D7AF5B;
+	align-self: baseline;
+	width: 20%;
+	height: 50px;
+
+	background-image: linear-gradient(to right, #e47d29, #D7AF5B, #ef9d43, #e77407);
+	box-shadow: 0 0px 10px 0 rgba(243, 95, 9, 0.932);
+
+
+	color: #2A2937;
+	cursor: pointer;
+	border: none;
+
+	border-radius: 20px;
+	-o-transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+
+.section_2 button a {
+	text-decoration: none;
+	color: #2A2937;
+	font-size: x-large;
+	font-weight: lighter;
+}
+
+.section_2 button:hover {
+	-o-transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+
+.section_2 button:hover:focus {
+	outline: none;
 }
