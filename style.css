@@ -7,14 +7,41 @@ body {
 }
 
 
+/* width */
+::-webkit-scrollbar {
+	width: 20px;
+	background: #2A2937;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px #2A2937;
+	border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #211e2e;
+	border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #1d1a28;
+}
+
+
+
 /* Header */
 
 .header-basic {
 	background-color: #2A2937;
+	width: 100%;
 	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
 	padding: 20px 40px;
 	height: 80px;
 	box-sizing: border-box;
+	position: fixed;
 }
 
 .header-basic .header-limiter {
@@ -26,8 +53,6 @@ body {
 /* Logo */
 
 .header-basic .header-limiter h1 {
-	float: left;
-	font: normal 28px Cookie, Arial, Helvetica, sans-serif;
 	line-height: 40px;
 	margin: 0;
 }
@@ -55,13 +80,12 @@ body {
 	padding: 0 5px;
 	text-decoration: none;
 	color: #ffffff;
-	font-size: 16px;
+	font-size: 20px;
 	opacity: 0.9;
 }
 
 .header-basic .header-limiter nav a:hover {
 	color: #D7AF5B;
-	/* opacity: 1; */
 }
 
 .header-basic .header-limiter nav a.selected {
@@ -101,7 +125,8 @@ body {
 /* MAIN  */
 
 main {
-	height: 150em;
+	height: auto;
+	width: 100%;
 	background-color: #2A2937;
 
 	/* parralax */
@@ -114,7 +139,15 @@ main {
 /* SECTION 1 */
 .first_section {
 	background-color: #1B1924;
-	height: 300px;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://wallpaperaccess.com/full/1372703.jpg);
+	width: 100%;
+
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	height: 350px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -124,68 +157,121 @@ main {
 	font-weight: lighter;
 	align-self: center;
 	font-size: 3vw;
-	padding-right: 5%;
+	padding-top: 5%;
 }
 
 .first_section .logoLR {
 	height: 80%;
-	padding-top: 2%;
 	align-items: center;
-	/* width: 100%; */
 }
 
 .first_section img {
-	height: 100%;
+	padding-top: 6%;
+	height: 120%;
 	width: 100%;
+	justify-content: baseline;
 	object-fit: contain;
 }
+
+
+/* effect h1 dev web */
+
+.first_section h1 {
+	color: #414256;
+	font-size: 50px;
+	font-weight: bold;
+	font-family: monospace;
+	letter-spacing: 7px;
+	cursor: pointer;
+}
+
+h1 span {
+	transition: .5s linear
+}
+
+h1:hover span:nth-child(1) {
+	margin-right: 5px
+}
+
+h1:hover span:nth-child(1):after {
+	content: "";
+}
+
+h1:hover span:nth-child(2) {
+	margin-left: 30px
+}
+
+h1:hover span {
+	color: #fff;
+	text-shadow: 0 0 10px #fff,
+		0 0 20px #fff,
+		0 0 40px #fff;
+}
+
 
 
 /* SECTION 2 */
 .section_2 {
 	display: flex;
+	text-align: center;
 	flex-direction: column;
-	margin-right: 25%;
-	margin-left: 25%;
+	margin-right: 15%;
+	margin-left: 15%;
 	padding: 4%;
 }
 
-.section_2 button {
-	background-color: #D7AF5B;
-	align-self: baseline;
+.section_2 p {
+	font-size: 3vh;
+	text-align: center;
+}
+
+
+.bn632-hover {
+	/* padding-top: 3%; */
+	justify-items: center;
+	text-align: center;
 	width: 20%;
-	height: 50px;
-
-	background-image: linear-gradient(to right, #e47d29, #D7AF5B, #ef9d43, #e77407);
-	box-shadow: 0 0px 10px 0 rgba(243, 95, 9, 0.932);
-
-
-	color: #2A2937;
-	cursor: pointer;
-	border: none;
-
-	border-radius: 20px;
-	-o-transition: all .4s ease-in-out;
-	-webkit-transition: all .4s ease-in-out;
-	transition: all .4s ease-in-out;
-}
-
-.section_2 button a {
-	text-decoration: none;
-	color: #2A2937;
-	font-size: x-large;
+	font-size: 2.5vh;
 	font-weight: lighter;
-}
-
-.section_2 button:hover {
+	color: #fff;
+	cursor: pointer;
+	margin: 20px;
+	height: 55px;
+	text-align: center;
+	border: none;
+	background-size: 300% 100%;
+	border-radius: 50px;
+	moz-transition: all .4s ease-in-out;
 	-o-transition: all .4s ease-in-out;
 	-webkit-transition: all .4s ease-in-out;
 	transition: all .4s ease-in-out;
 }
 
-.section_2 button:hover:focus {
+.bn632-hover:hover {
+	background-position: 100% 0;
+	moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+
+.bn632-hover:focus {
 	outline: none;
 }
+
+.bn632-hover.bn21 {
+	background-image: linear-gradient(to right,
+			#fc6076,
+			#ff9a44,
+			#ef9d43,
+			#e75516);
+	box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+}
+
+.button_placement {
+	margin-top: 4%;
+}
+
 
 
 /* HR  */
@@ -241,23 +327,45 @@ main {
 }
 
 /* MES PROJETS  */
+
+/* Exemple pour le Parralax  */
+
+.parallax {
+	/* The image used */
+	background-image: url('img_parallax.jpg');
+
+	/* Full height */
+	height: 100%;
+
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
 .bg_container1,
 .bg_container2,
 .bg_container3 {
 	width: 100%;
 	height: 20vh;
+
+	/* height: 100%;  */
+
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center;
 }
 
 .bg_container1 {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(https://www.theindianwire.com/wp-content/uploads/2020/04/fidget-spinner-video-games-controllers-playstation-wallpaper-1024x683.jpg);
-
 }
 
 .bg_container2 {
-	background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(https://g5-assets-cld-res.cloudinary.com/image/upload/x_0,y_134,h_1233,w_2186,c_crop/q_auto,f_auto,fl_lossy,c_fill,g_center,h_406,w_720/v1598996497/g5/g5-c-5lzenrews-olympus-property-management/g5-cl-1k8w0ssgsw-mosaic-dallas/services/GettyImages-1257225600_u7gsgu.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(https://cdn.wallpapersafari.com/81/94/BnO7iJ.jpg);
 
 }
 
@@ -318,21 +426,36 @@ div.gallery img {
 
 /* CONTACT FORM  */
 
-.contact {
+.contact_form {
 	background-color: #1B1924;
-	padding: 3%;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://wallpaperaccess.com/full/1372703.jpg);
+	width: 100%;
+
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	padding-top: 1%;
+	padding-bottom: 1%;
+	margin-top: 3%;
 	font-weight: lighter;
-	font-size: 200%;
+	/* font-size: 200%; */
+	text-align: center;
+	/* display: flex; */
 }
 
-.contact h1 {
+.contact_form h1 {
 	font-weight: lighter;
-	font-size: 200%;
-	padding-left: 3%;
+	font-size: 9vh;
+	/* padding-left: 3%; */
 }
-.contact p {
-	/* justify-content: center; */
+
+.contact_form p {
+	font-weight: lighter;
+	font-size: 4vh;
 }
+
 
 
 /* CONTACT FOOTER */
@@ -377,5 +500,5 @@ div.gallery img {
 
 .footer-nav p {
 	text-align: center;
-	font-size: smaller;
+	font-size: larger;
 }
